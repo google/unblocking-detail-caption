@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unblocking Fine-Grained Evaluation of Detailed Captions (NeurIPS 2025)</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Optional: Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Unblocking Fine-Grained Evaluation of Detailed Captions: An Explaining AutoRater and Critic-and-Revise Pipeline</h1>
+        <p class="authors">
+            Author One<sup>1</sup>, Author Two<sup>2</sup>, ... Anonymous Author(s) <!-- Update after de-anonymization -->
+        </p>
+        <p class="affiliations">
+            <sup>1</sup>Affiliation One, <sup>2</sup>Affiliation Two <!-- Update after de-anonymization -->
+        </p>
+        <p class="conference">
+            To appear in Conference on Neural Information Processing Systems (NeurIPS) 2025
+        </p>
+        <nav>
+            <a href="[LINK_TO_PAPER_PDF]" target="_blank">[Paper PDF]</a> |
+            <a href="[LINK_TO_ARXIV]" target="_blank">[arXiv]</a> |
+            <a href="[LINK_TO_GITHUB_REPO]" target="_blank">[GitHub Code]</a> |
+            <a href="#abstract">[Abstract]</a> |
+            <a href="#visuals">[Visuals]</a> |
+            <a href="#results">[Results]</a> |
+            <a href="#bibtex">[BibTeX]</a>
+            <!-- Add more links as needed, e.g., to a demo or dataset download page -->
+        </nav>
+    </header>
+
+    <main>
+        <section id="overview-image">
+            <h2>Overview</h2>
+            <img src="figures/figure1_overview.png" alt="Overview of VNLI-Critique and Critic-and-Revise Pipeline" class="responsive-img">
+            <p class="caption">
+                Figure 1: Our VNLI-Critique model operating as a Critic and within the Critic-and-Revise pipeline.
+                (Click image for higher resolution or more details - optional functionality)
+            </p>
+        </section>
+
+        <section id="abstract">
+            <h2>Abstract</h2>
+            <p>
+                Large Vision-Language Models (VLMs) now generate highly detailed, paragraph-length image captions, yet evaluating their factual accuracy remains challenging. Current methods often miss fine-grained errors, being designed for shorter texts or lacking datasets with verified inaccuracies. We introduce DOCCI-Critique, a benchmark with 1,400 VLM-generated paragraph captions (100 images, 14 VLMs) featuring over 10,216 sentence-level human annotations of factual correctness and explanatory rationales for errors, all within paragraph context. Building on this, we develop VNLI-Critique, a model for automated sentence-level factuality classification and critique generation. We highlight three key applications: (1) VNLI-Critique demonstrates robust generalization, validated by state-of-the-art performance on the M-HalDetect benchmark and strong results in CHOCOLATE claim verification. (2) The VNLI-Critique driven AutoRater for DOCCI-Critique provides reliable VLM rankings, showing excellent alignment with human factuality judgments (e.g., 0.98 Spearman). (3) An innovative Critic-and-Revise pipeline, where critiques from VNLI-Critique guide LLM-based corrections, achieves substantial improvements in caption factuality (e.g., a 46% gain on DetailCaps-4870). Our work offers a crucial benchmark alongside practical tools, designed to significantly elevate the standards for fine-grained evaluation and foster the improvement of VLM image understanding.
+            </p>
+        </section>
+
+        <section id="key-contributions">
+            <h2>Key Contributions</h2>
+            <ul>
+                <li><strong>📊 DOCCI-Critique Benchmark:</strong> A new, challenging dataset for fine-grained evaluation of detailed captions.</li>
+                <li><strong>🤖 VNLI-Critique Model:</strong> An "Explaining AutoRater" for automated factuality assessment and critique generation.</li>
+                <li><strong>✍️ Critic-and-Revise Pipeline:</strong> An automated pipeline to correct factual errors in captions using VNLI-Critique and an LLM.</li>
+            </ul>
+        </section>
+
+        <section id="visuals">
+            <h2>More Visuals & Examples</h2>
+            <!-- Example 1: DOCCI-Critique Annotation -->
+            <div>
+                <h3>DOCCI-Critique Annotation Example</h3>
+                <img src="figures/docci_critique_example.png" alt="DOCCI-Critique Annotation Example" class="responsive-img">
+                <p class="caption">Fig X: Illustrative example from the DOCCI-Critique benchmark showing sentence-level annotations and rationales (from Table 1 or similar).</p>
+            </div>
+            <!-- Example 2: Critic-and-Revise Pipeline -->
+            <div>
+                <h3>Critic-and-Revise Pipeline Example</h3>
+                <img src="figures/critic_revise_example.png" alt="Critic-and-Revise Pipeline Example" class="responsive-img">
+                <p class="caption">Fig Y: Qualitative example of the Critic-and-Revise pipeline correcting a caption (from Table showing pipeline steps).</p>
+            </div>
+            <!-- Add more figures/examples as needed -->
+        </section>
+
+        <section id="results">
+            <h2>Results Highlights</h2>
+            <p>Our approach demonstrates significant improvements:</p>
+            <ul>
+                <li>VNLI-Critique as an AutoRater achieves <strong>0.98 Spearman correlation</strong> with human judgments on DOCCI-Critique.</li>
+                <li>SOTA performance on M-HalDetect (<strong>0.76 Macro-F1</strong>) and strong generalization on CHOCOLATE.</li>
+                <li>Critic-and-Revise Pipeline yields a <strong>46% gain</strong> in factuality on DetailCaps-4870 and <strong>51%</strong> on PixelProse.</li>
+            </ul>
+            <p>For full experimental details, please refer to <a href="[LINK_TO_PAPER_PDF]" target="_blank">our paper</a>.</p>
+        </section>
+
+        <section id="downloads">
+            <h2>Downloads & Resources</h2>
+            <ul>
+                <li><a href="[LINK_TO_PAPER_PDF]" target="_blank">Paper PDF</a></li>
+                <li><a href="[LINK_TO_GITHUB_REPO]" target="_blank">GitHub Repository (Code, Models, Data)</a></li>
+                <li><a href="[LINK_TO_DOCCI_CRITIQUE_DATA_DOWNLOAD_OR_PAGE]" target="_blank">DOCCI-Critique Benchmark Data</a></li>
+                <li><a href="[LINK_TO_VNLI_CRITIQUE_MODEL_DOWNLOAD_OR_HUB]" target="_blank">VNLI-Critique Pre-trained Model</a></li>
+                <!-- Add link to slides, poster, video if available -->
+            </ul>
+        </section>
+
+        <section id="bibtex">
+            <h2>Citation</h2>
+            <p>If you find our work useful, please cite:</p>
+            <pre><code>
+@inproceedings{yourlastnameYYYYunblocking,
+  title={Unblocking Fine-Grained Evaluation of Detailed Captions: An Explaining AutoRater and Critic-and-Revise Pipeline},
+  author={Anonymous Author(s)},
+  booktitle={Conference on Neural Information Processing Systems (NeurIPS)},
+  year={2025},
+  % url={...},
+  % doi={...}
+}
+            </code></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Your Name / Your Institution. Last updated: [Date]</p>
+        <!-- Optional: Link to a theme or template if you used one -->
+    </footer>
+
+    <!-- Optional: JavaScript for interactive elements if any -->
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
