@@ -1,26 +1,28 @@
-/* 
-this CSS is compiled from SCSS and readonly 
+/*
+this CSS is compiled from SCSS and readonly
 */
 /* Style for the links on author names in the header */
 header p.authors a { /* More specific selector to target links within the authors paragraph in the header */
-    color: #303030;     /* Light Blue - A common choice for light text on dark backgrounds */
-    text-decoration: none; /* Optional: remove underline by default */
+    color: #303030;     /* Note: #303030 is a dark gray. If you intended light blue, the hex code would be different (e.g., #ADD8E6 or a more accessible blue). */
+    text-decoration: underline; /* MODIFIED: This will make author names underlined by default */
 }
 
 header p.authors a:hover {
-    color: #287e9a;     /* A slightly brighter/different blue for hover, or keep the same */
-    text-decoration: underline; /* Add underline on hover for better affordance */
+    color: #287e9a;     /* A slightly different dark gray/blue for hover */
+    text-decoration: underline; /* Keeps the underline on hover. You could change this to 'none' if you wanted the underline to disappear on hover. */
 }
 
 /* Optional: Ensure the non-link parts of the author string are a contrasting color (e.g., white) */
 header p.authors {
-    color: #616161; /* White for the non-linked text like commas, asterisks */
+    color: #616161; /* Mid-gray for the non-linked text like commas, asterisks */
 }
 
 /* Ensure superscripts are also legible */
 header p.authors sup {
-    color: #616161; /* A slightly dimmer white or very light gray for superscripts */
+    color: #616161; /* Mid-gray for superscripts, consistent with other non-link text */
 }
+
+
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -32,7 +34,7 @@ body {
 
 header {
   background: #f4f4f4;
-  color: #464646;
+  color: #464646; /* Default text color for header content if not overridden */
   padding: 1rem 0;
   text-align: center; }
 
